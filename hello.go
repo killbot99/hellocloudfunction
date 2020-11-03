@@ -1,21 +1,18 @@
 package hello
 
 import (
-	"context"
+	"http"
 	"fmt"
 	"time"
 )
 
-func Hello(ctx context.Context, message Message) {
+func Hello(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("Hello World! %s", time.Now())
 }
 
 func main() {
-	var message Message
-	var ctx context.Context
-	Hello(ctx, message)
+	var w http.ResponseWriter
+	var r http.Request
+	Hello(r, *w)
 }
 
-type Message struct {
-	Data []byte `json:"data"`
-}
