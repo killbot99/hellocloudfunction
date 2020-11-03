@@ -13,7 +13,7 @@ func Hello(ctx context.Context, message Message) {
 func main() {
 	var message Message
 	var ctx context.Context
-	hello(ctx, message)
+	Hello(ctx, message)
 }
 
 type Message struct {
