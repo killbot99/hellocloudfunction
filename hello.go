@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func hello(ctx context.Context, message Message) {
+func Hello(ctx context.Context, message Message) {
 	fmt.Printf("Hello World! %s", time.Now())
 }
 
